@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pengumuman Hasil Seleksi PMR Wira | SMK Negeri 1 Sukoharjo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Patrick+Hand&family=Coming+Soon&family=Architects+Daughter&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#c62828;
+  --red-dark:#a51f1f;
+  --red-deep:#8f1717;
+  --red-soft:#fff1f1;
+  --red-line:#ffd6d6;
+  --ink:#252525;
+  --muted:#707070;
+  --bg:#fff8f8;
+  --white:#fff;
+  --green:#16854a;
+  --green-soft:#ecf9f1;
+  --shadow:0 18px 50px rgba(130,25,25,.10);
+  --radius:22px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  min-height:100vh;
+}
+button,input{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+
+.view{display:none;min-height:100vh}
+.view.active{display:block}
+
+/* ==================== HOME ==================== */
+.home{
+  background:
+    radial-gradient(circle at 8% 12%,rgba(198,40,40,.07),transparent 25%),
+    radial-gradient(circle at 92% 35%,rgba(198,40,40,.05),transparent 24%),
+    linear-gradient(180deg,#fff 0%,#fff7f7 100%);
+}
+.nav{
+  height:76px;
+  width:min(1180px,calc(100% - 36px));
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;
+  background:var(--red);
+  color:white;display:grid;place-items:center;
+  font-size:21px;font-weight:800;
+  box-shadow:0 8px 20px rgba(198,40,40,.20);
+}
+.brand-text strong{display:block;font-family:Poppins;font-size:15px}
+.brand-text span{display:block;color:#777;font-size:11px;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:28px;color:#555;font-size:13px;font-weight:600}
+.nav-links a:hover{color:var(--red)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.lang{
+  border:1px solid #e5dada;background:white;color:#555;
+  border-radius:10px;padding:9px 10px;font-size:12px;
+}
+.lang option{font-size:12px}
+.nav-btn,.primary-btn{
+  border:0;background:var(--red);color:white;
+  border-radius:11px;padding:11px 16px;font-weight:700;font-size:13px;
+  box-shadow:0 8px 20px rgba(198,40,40,.18);
+  transition:.2s;
+}
+.nav-btn:hover,.primary-btn:hover{background:var(--red-dark);transform:translateY(-1px)}
+.mobile-menu{display:none}
+
+.hero{
+  width:min(1180px,calc(100% - 36px));
+  margin:auto;
+  min-height:590px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:50px;
+  padding:62px 0 80px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--red-line);
+  color:var(--red);border-radius:999px;padding:8px 12px;
+  font-size:11px;font-weight:800;letter-spacing:.3px;
+  margin-bottom:20px;
+}
+.eyebrow-dot{width:7px;height:7px;background:var(--red);border-radius:50%}
+.hero h1{
+  font-family:Poppins,sans-serif;
+  font-size:clamp(38px,5.3vw,68px);
+  line-height:1.02;
+  letter-spacing:-2.5px;
+  margin-bottom:20px;
+}
+.hero h1 em{color:var(--red);font-style:normal}
+.hero-desc{max-width:610px;color:#666;line-height:1.75;font-size:15px;margin-bottom:28px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.secondary-btn{
+  border:1px solid #e6dcdc;background:#fff;color:#444;
+  border-radius:11px;padding:11px 16px;font-size:13px;font-weight:700;
+}
+.secondary-btn:hover{border-color:#d8bebe;background:#fffafa}
+.hero-note{
+  margin-top:22px;color:#8a8a8a;font-size:11px;
+}
+.hero-art{
+  position:relative;min-height:390px;
+  display:grid;place-items:center;
+}
+.art-card{
+  width:min(390px,88%);aspect-ratio:1/1;
+  background:#fff;border:1px solid #f0dddd;
+  border-radius:34px;box-shadow:var(--shadow);
+  position:relative;overflow:hidden;
+  transform:rotate(2deg);
+}
+.art-card:before{
+  content:"";position:absolute;inset:-35%;
+  background:radial-gradient(circle,#ffdede 0 15%,transparent 16%);
+  background-size:36px 36px;opacity:.35;transform:rotate(-9deg);
+}
+.art-cross{
+  position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:150px;height:150px;background:var(--red);
+  border-radius:28px;
+  box-shadow:0 25px 50px rgba(198,40,40,.22);
+}
+.art-cross:before,.art-cross:after{
+  content:"";position:absolute;background:white;border-radius:8px;
+}
+.art-cross:before{width:48px;height:112px;left:51px;top:19px}
+.art-cross:after{width:112px;height:48px;left:19px;top:51px}
+.art-label{
+  position:absolute;bottom:24px;left:26px;
+  font-family:Poppins;font-weight:800;font-size:17px;
+}
+.art-label small{display:block;font-family:Inter;font-size:10px;color:#888;margin-top:4px;font-weight:500}
+.float-card{
+  position:absolute;background:#fff;border:1px solid #eee1e1;
+  box-shadow:0 14px 35px rgba(80,20,20,.12);
+  border-radius:16px;padding:14px 16px;
+}
+.float-card.top{right:0;top:28px}
+.float-card.bottom{left:0;bottom:32px}
+.float-card strong{display:block;font-size:12px}
+.float-card span{display:block;font-size:10px;color:#888;margin-top:4px}
+.float-icon{
+  width:30px;height:30px;border-radius:9px;background:var(--red-soft);
+  color:var(--red);display:grid;place-items:center;margin-bottom:8px;font-weight:800;
+}
+
+.section{
+  width:min(1180px,calc(100% - 36px));
+  margin:auto;padding:78px 0;
+}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
+.section-kicker{font-size:11px;color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px}
+.section h2{font-family:Poppins;font-size:31px;line-height:1.15;letter-spacing:-1px}
+.section-head p{max-width:470px;color:#777;font-size:13px;line-height:1.7}
+
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.info-card{
+  background:#fff;border:1px solid #eee2e2;border-radius:18px;
+  padding:22px;box-shadow:0 8px 25px rgba(80,20,20,.045);
+}
+
+.info-icon{
+  width:38px;height:38px;border-radius:11px;background:var(--red-soft);
+  color:var(--red);display:grid;place-items:center;font-weight:800;margin-bottom:20px;
+}
+.info-card span{font-size:11px;color:#888}
+.info-card strong{display:block;font-size:15px;margin-top:7px;line-height:1.35}
+
+.about{
+  background:#fff;
+  border-top:1px solid #f0e4e4;border-bottom:1px solid #f0e4e4;
+}
+.about-inner{
+  width:min(1180px,calc(100% - 36px));margin:auto;
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;
+  align-items:center;padding:88px 0;
+}
+.about-visual{
+  min-height:300px;border-radius:28px;background:var(--red);
+  position:relative;overflow:hidden;padding:30px;color:white;
+}
+.about-visual:after{
+  content:"PMR";position:absolute;right:-20px;bottom:-40px;
+  font-family:Poppins;font-size:140px;font-weight:800;opacity:.08;
+}
+.about-visual h3{font-family:Poppins;font-size:27px;max-width:300px;position:relative;z-index:1}
+.about-visual p{font-size:12px;line-height:1.7;max-width:310px;margin-top:14px;color:#ffeaea;position:relative;z-index:1}
+.about-copy p{color:#707070;font-size:14px;line-height:1.8;margin-top:14px;max-width:580px}
+.quote-box{
+  margin-top:24px;border-left:3px solid var(--red);
+  padding:13px 17px;background:#fff8f8;color:#555;
+  font-size:12px;line-height:1.6;border-radius:0 12px 12px 0;
+}
+
+.cta{
+  width:min(1180px,calc(100% - 36px));margin:78px auto;
+  background:#1f1f1f;color:#fff;border-radius:27px;
+  padding:45px 50px;display:flex;justify-content:space-between;align-items:center;gap:30px;
+  position:relative;overflow:hidden;
+}
+.cta:after{content:"";position:absolute;width:260px;height:260px;border:55px solid rgba(198,40,40,.22);border-radius:50%;right:-70px;top:-120px}
+.cta h2{font-family:Poppins;font-size:29px;position:relative;z-index:1}
+.cta p{font-size:12px;color:#bbb;margin-top:8px;position:relative;z-index:1}
+.cta .primary-btn{position:relative;z-index:2;white-space:nowrap}
+footer{
+  background:#181818;color:#aaa;padding:28px 18px;
+}
+.footer-inner{width:min(1180px,100%);margin:auto;display:flex;justify-content:space-between;gap:20px;font-size:11px}
+.footer-inner strong{color:#fff}
+
+/* ==================== INPUT / COUNTDOWN / RESULT ==================== */
+.form-view,.countdown-view,.result-view{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 18%,rgba(198,40,40,.14),transparent 26%),
+    radial-gradient(circle at 92% 78%,rgba(198,40,40,.10),transparent 28%),
+    linear-gradient(135deg,#fff 0%,#fff6f6 48%,#ffe9e9 100%);
+}
+.form-view:before,.countdown-view:before,.result-view:before{
+  content:"✚   ✚   ✚   ✚   ✚   ✚";position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;word-spacing:70px;
+  font-size:110px;font-weight:800;color:rgba(198,40,40,.035);
+  transform:rotate(-14deg);pointer-events:none;white-space:nowrap;
+}
+.form-view.active,.countdown-view.active,.result-view.active{
+  display:flex;align-items:center;justify-content:center;padding:0;min-height:100vh;
+}
+.form-shell{position:relative;z-index:2;width:min(1180px,calc(100% - 36px));min-height:100vh;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px;padding:70px 0}
+.form-intro{position:relative}
+.form-intro .mini-kicker{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--red-line);color:var(--red);border-radius:999px;padding:9px 14px;font-size:11px;font-weight:800;margin-bottom:20px}
+.form-intro .mini-kicker i{width:7px;height:7px;border-radius:50%;background:var(--red);display:block}
+.form-intro h1{font-family:Poppins;font-size:clamp(42px,5vw,64px);line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
+.form-intro h1 em{font-style:normal;color:var(--red)}
+.form-intro p{max-width:520px;color:#707070;font-size:14px;line-height:1.8}
+.form-feature-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.form-feature{background:#fff;border:1px solid #eee0e0;border-radius:14px;padding:12px 14px;font-size:11px;font-weight:700;box-shadow:0 8px 25px rgba(80,20,20,.05)}
+.form-feature b{color:var(--red);margin-right:5px}
+.back{display:inline-flex;align-items:center;gap:7px;color:#666;font-size:12px;font-weight:700;background:#fff;border:1px solid #eadede;padding:10px 14px;border-radius:11px;margin-bottom:22px;transition:.2s}
+.back:hover{color:var(--red);transform:translateY(-1px)}
+.input-card{width:100%;max-width:540px;margin-left:auto;background:rgba(255,255,255,.94);padding:40px;border-radius:28px;box-shadow:0 25px 70px rgba(130,25,25,.14);border:1px solid #f0dede;position:relative;overflow:hidden;backdrop-filter:blur(8px)}
+.input-card:before{content:"";position:absolute;right:-90px;top:-90px;width:230px;height:230px;border-radius:50%;background:#fff0f0}
+.input-card:after{content:"✚";position:absolute;right:28px;bottom:10px;font-size:100px;font-weight:800;color:rgba(198,40,40,.035);line-height:1}
+.input-card>*{position:relative;z-index:1}
+.corner{display:inline-flex;background:var(--red);color:#fff;padding:8px 13px;border-radius:0 0 13px 13px;font-size:11px;font-weight:800;margin:-40px 0 24px -40px}
+.input-card h2{font-family:Poppins;text-align:left;color:#222;font-size:27px;line-height:1.2;margin-bottom:8px}
+.input-card h2:after{content:"";display:block;width:45px;height:4px;border-radius:20px;background:var(--red);margin-top:12px}
+.motivasi{text-align:left;color:#777;font-size:12px;line-height:1.7;margin:18px 0 25px;font-family:"Gloria Hallelujah",cursive}
+.input-card label{display:block;font-size:12px;font-weight:800;color:#444;margin:0 0 7px}
+.input-wrap{position:relative;margin-bottom:16px}
+.input-wrap span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:17px;z-index:2;filter:saturate(.9)}
+.input-wrap input{width:100%;padding:14px 15px 14px 44px;border:1px solid #ddd4d4;border-radius:13px;outline:none;font-size:13px;background:#fff;transition:.2s}
+.input-wrap input:focus{border-color:#dc7777;box-shadow:0 0 0 4px #fff0f0}
+.note{text-align:center;color:#888;font-family:"Coming Soon",cursive;font-size:12px;margin:4px 0 19px}
+.main-btn{width:100%;border:0;padding:14px;border-radius:13px;background:var(--red);color:#fff;font-weight:800;font-size:13px;cursor:pointer;box-shadow:0 12px 25px rgba(198,40,40,.20);transition:.2s}
+.main-btn:hover{background:var(--red-dark);transform:translateY(-2px)}
+.tagline{text-align:center;color:var(--red);font-family:"Patrick Hand",cursive;font-size:13px;margin-top:15px}
+.error{display:none;background:#fff0f0;border:1px solid #ffd0d0;color:#a11;padding:10px 12px;border-radius:10px;font-size:11px;margin-bottom:14px}.error.show{display:block}
+
+/* ==================== COUNTDOWN ==================== */
+.count-card{position:relative;z-index:2;text-align:center;background:rgba(255,255,255,.88);border:1px solid #f0dddd;border-radius:30px;padding:50px 70px;box-shadow:0 25px 70px rgba(130,25,25,.12);min-width:min(560px,calc(100vw - 36px));backdrop-filter:blur(8px)}
+.count-orbit{width:190px;height:190px;margin:0 auto 25px;border-radius:50%;display:grid;place-items:center;position:relative;background:#fff;border:1px solid #f2dddd;box-shadow:0 15px 40px rgba(130,25,25,.10)}
+.count-orbit:before{content:"";position:absolute;inset:9px;border-radius:50%;border:5px solid #f8dddd;border-top-color:var(--red);animation:spin 1s linear infinite}
+.count-title{font-family:Poppins;font-size:20px;font-weight:800;color:#222;margin-bottom:8px}.count-card .mini{font-size:12px;color:#888;margin-bottom:20px}
+.count-number{font-family:Poppins;font-size:82px;line-height:1;color:var(--red);font-weight:800;animation:pop .8s ease;position:relative;z-index:2}
+.count-line{width:220px;height:5px;background:#f2d4d4;border-radius:20px;margin:25px auto 0;overflow:hidden}.count-line span{display:block;height:100%;width:100%;background:var(--red);animation:line 1s linear}
+@keyframes pop{0%{opacity:0;transform:scale(.55)}60%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}@keyframes line{from{width:100%}to{width:0}}@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ==================== RESULT ==================== */
+.result-view{align-items:flex-start!important;padding:55px 0!important;overflow:auto}
+.result-page{position:relative;z-index:2;width:min(1000px,calc(100% - 36px));margin:auto}
+.result-container{width:calc(100%-40px);max-width:none;margin:20 auto}
+.result-top{text-align:center;margin-bottom:28px}.result-top .result-kicker{display:inline-flex;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid #eedede;color:var(--red);font-size:10px;font-weight:800;letter-spacing:.8px}.result-top h2{font-family:Poppins;font-size:clamp(25px,4vw,36px);color:#222;letter-spacing:-1px;margin-top:13px}.result-top p{font-size:12px;color:#777;margin-top:6px}
+.status-card{border-radius:25px;padding:34px;color:#fff;box-shadow:0 20px 55px rgba(30,10,10,.18);position:relative;overflow:hidden}.status-card:after{content:"✚";position:absolute;right:-20px;bottom:-60px;font-size:190px;font-weight:800;opacity:.07;line-height:1}
+.status-pass{background:linear-gradient(135deg,#230fcf,#128fe8);border-bottom:5px solid #fff}.status-fail{background:linear-gradient(135deg,#a01616,#7d2020);border-bottom:5px solid #ffb0b0}
+.status-header{font-family:Poppins;font-size:clamp(24px,3vw,42px);font-weight:700;line-height:1.15;margin-bottom:28px;text-transform:uppercase;max-width:900px;position:relative;z-index:1}.status-header small{display:block;font-family:Inter;font-size:11px;font-weight:600;opacity:.72;text-transform:none;margin-bottom:8px}
+.identity{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:rgba(255,255,255,.12);padding:14px;border-radius:14px;position:relative;z-index:1}.identity-item{display:flex;flex-direction:column;padding:12px}.identity .label{font-size:9px;opacity:.72;text-transform:uppercase;letter-spacing:.7px}.identity .value{font-family:Poppins;font-size:15px;font-weight:700;margin-top:4px}
+.info-card{background:#fff;border-radius:0 0 25px 25px;padding:30px;box-shadow:0 12px 35px rgba(80,20,20,.07);border:1px solid #eee2e2;border-top:0}.info-card h4{font-family:Poppins;font-size:17px;margin-bottom:10px}.note-text{font-size:13px;color:#555;line-height:1.8}.result-quote{font-family:"Architects Daughter",cursive;font-size:14px;font-weight:600;color:#666;margin:20px 0 23px;padding:14px 16px;border-left:3px solid var(--red);background:#fff8f8;border-radius:0 12px 12px 0}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:13px 19px;font-size:12px;font-weight:800;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.wa{background:#1c9b57;color:white;box-shadow:0 8px 20px rgba(28,155,87,.18)}.again{background:#f3eeee;color:#555}.not-found{text-align:center;background:#fff;padding:55px 30px;border-radius:25px;box-shadow:0 15px 40px rgba(80,20,20,.08);border:1px solid #eee2e2}.not-found .nf-icon{font-size:45px;margin-bottom:12px}.not-found h3{font-family:Poppins;color:var(--red);margin-bottom:10px}.not-found p{color:#666;font-size:13px;line-height:1.7;margin-bottom:22px}
+.quote-pass{
+  color:#1976d2;
+  background:#eef8ff;
+  border-left:4px solid #42a5f5;
+}
+
+.quote-fail{
+  color:#d32f2f;
+  background:#fff0f0;
+  border-left:4px solid #ef5350;
+}
+
+/* ==================== MOBILE ==================== */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .mobile-menu{display:block;border:1px solid #eadede;background:white;border-radius:10px;padding:9px 11px;color:#555}
+  .nav-actions .nav-btn{display:none}
+  .hero{grid-template-columns:1fr;gap:30px;padding-top:45px}
+  .hero-art{min-height:330px}
+  .info-grid{grid-template-columns:repeat(2,1fr)}
+  .about-inner{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:760px){
+  .identity{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .nav{height:68px;width:min(100% - 24px,1180px)}
+  .brand-mark{width:38px;height:38px}.brand-text strong{font-size:13px}.brand-text span{font-size:9px}.lang{padding:8px}
+  .hero{width:calc(100% - 28px);padding:40px 0 55px;min-height:auto}.hero h1{font-size:39px;letter-spacing:-1.6px}.hero-desc{font-size:13px}
+  .hero-art{min-height:290px}.art-card{width:270px}.art-cross{width:105px;height:105px;border-radius:20px}.art-cross:before{width:34px;height:78px;left:36px;top:14px}.art-cross:after{width:78px;height:34px;left:14px;top:36px}
+  .float-card.top{right:-4px;top:10px}.float-card.bottom{left:-3px;bottom:10px}
+  .section{padding:58px 0;width:calc(100% - 28px)}.section-head{display:block}.section-head p{margin-top:12px}.section h2{font-size:25px}
+  .info-grid{grid-template-columns:1fr 1fr;gap:10px}.info-card{padding:17px}.info-card strong{font-size:13px}
+  .about-inner{width:calc(100% - 28px);padding:60px 0}.about-visual{min-height:250px}.cta{width:calc(100% - 28px);margin:55px auto;padding:30px 24px;display:block}.cta h2{font-size:23px}.cta .primary-btn{margin-top:20px;width:100%}.footer-inner{display:block;line-height:1.8}.footer-inner div+div{margin-top:8px}
+  .form-view.active,.countdown-view.active,.result-view.active{padding:16px}.input-card{padding:30px 22px}.result-view{align-items:flex-start!important;padding-top:25px!important}.status-card{padding:24px 17px}.info-card{padding:20px}.status-header{font-size:16px}.result-top h2{font-size:15px}.result-container{margin:10px auto}
+}
+@media(max-width:480px){.page{padding:18px 12px}.home-left{padding:38px 24px}.home h1{font-size:38px}.home-right{min-height:250px}.emblem{width:145px;height:145px;font-size:65px}}
+</style>
+</head>
+
+<body>
+
+<!-- ==================== BERANDA ==================== -->
+<section id="homeView" class="view home active">
+  <header class="nav">
+    <a href="#" class="brand" onclick="showView('homeView');return false">
+      <div class="brand-mark">✚</div>
+      <div class="brand-text">
+        <strong>PMR WIRA</strong>
+        <span>SMK Negeri 1 Sukoharjo</span>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#info">Informasi</a>
+      <a href="#about">Tentang PMR</a>
+      <a href="#cta">Hasil Seleksi</a>
+    </nav>
+
+    <div class="nav-actions">
+      <select id="language" class="lang" onchange="changeLanguage(this.value)" aria-label="Bahasa">
+        <option value="id">🇮🇩 Indonesia</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+      <button class="nav-btn" onclick="showView('formView')" data-i18n="navResult">Lihat Hasil</button>
+      <button class="mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="eyebrow">PENGUMUMAN RESMI PMR WIRA</span></div>
+        <h1 data-i18n="heroTitle">Pengumuman Hasil<br><em>Seleksi PMR Wira</em></h1>
+        <p class="hero-desc" data-i18n="heroDesc">
+          Temukan hasil seleksi PMR Wira SMK Negeri 1 Sukoharjo dengan mudah.
+          Masukkan data sesuai pendaftaran dan lihat hasilmu melalui portal pengumuman ini.
+        </p>
+        <div class="hero-buttons">
+          <button class="primary-btn" onclick="showView('formView')" data-i18n="heroButton">Lihat Hasil Seleksi →</button>
+          <a class="secondary-btn" href="#info" data-i18n="heroInfo">Informasi Seleksi</a>
+        </div>
+        <p class="hero-note" data-i18n="heroNote">Pastikan nama dan kelas yang dimasukkan sesuai dengan data pendaftaran.</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="float-card top">
+          <div class="float-icon">✓</div>
+          <strong data-i18n="floatTop">Portal Pengumuman</strong>
+          <span data-i18n="floatTopSub">Hasil seleksi resmi</span>
+        </div>
+        <div class="art-card">
+          <div class="art-cross"></div>
+          <div class="art-label">PMR WIRA<small>SMK Negeri 1 Sukoharjo</small></div>
+        </div>
+        <div class="float-card bottom">
+          <div class="float-icon">♥</div>
+          <strong data-i18n="floatBottom">Semangat & Kepedulian</strong>
+          <span data-i18n="floatBottomSub">Menjadi bagian dari PMR Wira</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="info">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker" data-i18n="infoKicker">Informasi</div>
+          <h2 data-i18n="infoTitle">Informasi Pengumuman</h2>
+        </div>
+        <p data-i18n="infoDesc">Hal-hal penting yang perlu diketahui sebelum memeriksa hasil seleksi.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">01</div>
+          <span data-i18n="card1Label">Pengumuman</span>
+          <strong data-i18n="card1Value">Hasil Seleksi PMR Wira</strong>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">02</div>
+          <span data-i18n="card2Label">Status</span>
+          <strong data-i18n="card2Value">Hasil dapat diperiksa</strong>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">03</div>
+          <span data-i18n="card3Label">Data Peserta</span>
+          <strong data-i18n="card3Value">Nama & kelas sesuai pendaftaran</strong>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">04</div>
+          <span data-i18n="card4Label">Tahap Selanjutnya</span>
+          <strong data-i18n="card4Value">Ikuti informasi dari PMR Wira</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-visual">
+          <h3 data-i18n="aboutVisualTitle">Langkah Awal Menjadi Bagian dari PMR Wira.</h3>
+          <p data-i18n="aboutVisualDesc">Seleksi menjadi salah satu proses untuk menemukan anggota yang siap belajar, peduli, dan berkontribusi bersama.</p>
+        </div>
+        <div class="about-copy">
+          <div class="section-kicker" data-i18n="aboutKicker">Tentang Seleksi</div>
+          <h2 data-i18n="aboutTitle">Bukan hanya tentang hasil.</h2>
+          <p data-i18n="aboutText">
+            Proses seleksi PMR Wira merupakan langkah awal untuk mengenal dan membangun semangat kebersamaan,
+            kepedulian, serta kesiapan untuk mengikuti kegiatan PMR di sekolah.
+          </p>
+          <div class="quote-box" data-i18n="quote">
+            “Apapun hasilnya... you're doing great, keep growing.”
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div>
+        <h2 data-i18n="ctaTitle">Siap mengetahui hasil seleksimu?</h2>
+        <p data-i18n="ctaDesc">Masukkan nama lengkap dan kelas sesuai data pendaftaran.</p>
+      </div>
+      <button class="primary-btn" onclick="showView('formView')" data-i18n="ctaButton">Periksa Hasil Seleksi →</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>PMR WIRA</strong> · SMK Negeri 1 Sukoharjo</div>
+      <div data-i18n="footer">Portal pengumuman hasil seleksi · Dibuat dengan semangat untuk PMR Wira.</div>
+    </div>
+  </footer>
+</section>
+
+<!-- ==================== INPUT ==================== -->
+<section id="formView" class="view form-view">
+  <div class="form-shell">
+    <div class="form-intro">
+      <button class="back" onclick="showView('homeView')" data-i18n="backHome">← Kembali ke Beranda</button>
+      <div class="mini-kicker"><i></i><span data-i18n="eyebrow">PENGUMUMAN RESMI PMR WIRA</span></div>
+      <h1>Selangkah lagi,<br><em>temukan hasilmu.</em></h1>
+      <p>Masukkan data sesuai pendaftaran. Pastikan nama dan kelas ditulis dengan benar agar hasil seleksi dapat ditemukan.</p>
+      <div class="form-feature-row">
+        <div class="form-feature"><b>01</b> Data sesuai pendaftaran</div>
+        <div class="form-feature"><b>02</b> Hasil resmi PMR Wira</div>
+        <div class="form-feature"><b>03</b> Cek dengan mudah</div>
+      </div>
+    </div>
+    <div class="input-card">
+      <div class="corner">❤️🤍 PMR WIRA</div>
+      <h2 data-i18n="formTitle">Hasil Seleksi PMR WIRA</h2>
+      <div class="motivasi" data-i18n="formMotivation">Apapun hasilnya... you're doing great, keep growing 🌱</div>
+      <div id="errorBox" class="error"></div>
+      <label for="inputNama" data-i18n="nameLabel">Nama Lengkap</label>
+      <div class="input-wrap"><span>👤</span><input type="text" id="inputNama" autocomplete="name" placeholder="Nama Lengkap" data-placeholder="namePlaceholder"></div>
+      <label for="inputKelas" data-i18n="classLabel">Kelas</label>
+      <div class="input-wrap"><span>🎓</span><input type="text" id="inputKelas" placeholder="Contoh: XI TJKT 2" data-placeholder="classPlaceholder"></div>
+      <div class="note" data-i18n="formNote">🩵 Jangan lupa berdoa & percaya diri yaa!</div>
+      <button class="main-btn" onclick="lihatHasil()" data-i18n="checkButton">Lihat Hasil Seleksi →</button>
+      <div class="tagline" data-i18n="tagline">PMR Spirit yeah! 💪</div>
+      <div class="tagline">by: Faraz & IG: frzsjaa</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COUNTDOWN ==================== -->
+<section id="countdownView" class="view countdown-view">
+  <div class="count-card">
+    <div class="count-title" data-i18n="countTitle">Hasil seleksi sedang disiapkan</div>
+    <div class="mini" data-i18n="countMini">Tenang, hasilmu akan ditampilkan sebentar lagi...</div>
+    <div class="count-orbit"><div id="countdownBox" class="count-number">3</div></div>
+    <div class="count-line"><span></span></div>
+  </div>
+</section>
+
+<!-- ==================== HASIL ==================== -->
+<section id="resultView" class="view result-view">
+  <div id="resultPage" class="result-page"></div>
+</section>
+
+<script>
+/* ==================== DATA PESERTA ====================
+
+======================================================== */
+const dataPeserta = {
+  "Faras Fadhil Firdaus|XII TJKT 2": "Lolos",
+  "Almira Zakiqqah|XII AKL 3": "Tidak Lolos",
+};
+
+let currentResult = null;
+
+const translations = {
+  id:{
+    navResult:"Lihat Hasil", eyebrow:"PENGUMUMAN RESMI PMR WIRA",
+    heroTitle:"Pengumuman Hasil<br><em>Seleksi PMR Wira</em>",
+    heroDesc:"Temukan hasil seleksi PMR Wira SMK Negeri 1 Sukoharjo dengan mudah. Masukkan data sesuai pendaftaran dan lihat hasilmu melalui portal pengumuman ini.",
+    heroButton:"Lihat Hasil Seleksi →", heroInfo:"Informasi Seleksi",
+    heroNote:"Pastikan nama dan kelas yang dimasukkan sesuai dengan data pendaftaran.",
+    floatTop:"Portal Pengumuman",floatTopSub:"Hasil seleksi resmi",
+    floatBottom:"Semangat & Kepedulian",floatBottomSub:"Menjadi bagian dari PMR Wira",
+    infoKicker:"Informasi",infoTitle:"Informasi Pengumuman",
+    infoDesc:"Hal-hal penting yang perlu diketahui sebelum memeriksa hasil seleksi.",
+    card1Label:"Pengumuman",card1Value:"Hasil Seleksi PMR Wira",
+    card2Label:"Status",card2Value:"Hasil dapat diperiksa",
+    card3Label:"Data Peserta",card3Value:"Nama & kelas sesuai pendaftaran",
+    card4Label:"Tahap Selanjutnya",card4Value:"Ikuti informasi dari PMR Wira",
+    aboutKicker:"Tentang Seleksi",aboutTitle:"Bukan hanya tentang hasil.",
+    aboutVisualTitle:"Langkah Awal Menjadi Bagian dari PMR Wira.",
+    aboutVisualDesc:"Seleksi menjadi salah satu proses untuk menemukan anggota yang siap belajar, peduli, dan berkontribusi bersama.",
+    aboutText:"Proses seleksi PMR Wira merupakan langkah awal untuk mengenal dan membangun semangat kebersamaan, kepedulian, serta kesiapan untuk mengikuti kegiatan PMR di sekolah.",
+    quote:"“Apapun hasilnya... you're doing great, keep growing.”",
+    ctaTitle:"Siap mengetahui hasil seleksimu?",ctaDesc:"Masukkan nama lengkap dan kelas sesuai data pendaftaran.",ctaButton:"Periksa Hasil Seleksi →",
+    footer:"Portal pengumuman hasil seleksi · Dibuat dengan semangat untuk PMR Wira.",
+    backHome:"← Kembali ke Beranda",formTitle:"Hasil Seleksi PMR WIRA",
+    formMotivation:"Apapun hasilnya... you're doing great, keep growing.",
+    nameLabel:"Nama Lengkap",classLabel:"Kelas",namePlaceholder:"Nama Lengkap",
+    classPlaceholder:"Contoh: XI TJKT 2",formNote:"Jangan lupa berdoa & percaya diri yaa!",
+    checkButton:"Lihat Hasil Seleksi",tagline:"PMR Spirit yeah!",
+    countTitle:"Hasil seleksi sedang disiapkan",
+    countMini:"Tenang, hasilmu akan ditampilkan sebentar lagi...",
+    invalid:"Nama dan kelas harus diisi terlebih dahulu."
+  },
+  en:{
+    navResult:"View Result", eyebrow:"OFFICIAL PMR WIRA ANNOUNCEMENT",
+    heroTitle:"Selection Results<br><em>PMR Wira</em>",
+    heroDesc:"Find the PMR Wira selection result of SMK Negeri 1 Sukoharjo. Enter your registration data and check your result through this announcement portal.",
+    heroButton:"View Selection Result →", heroInfo:"Selection Information",
+    heroNote:"Make sure the name and class match the registration data.",
+    floatTop:"Announcement Portal",floatTopSub:"Official selection result",
+    floatBottom:"Caring & Spirit",floatBottomSub:"Becoming part of PMR Wira",
+    infoKicker:"Information",infoTitle:"Announcement Information",
+    infoDesc:"Important things to know before checking the selection result.",
+    card1Label:"Announcement",card1Value:"PMR Wira Selection Result",
+    card2Label:"Status",card2Value:"Result is available",
+    card3Label:"Participant Data",card3Value:"Name & class as registered",
+    card4Label:"Next Step",card4Value:"Follow PMR Wira information",
+    aboutKicker:"About the Selection",aboutTitle:"It is not only about the result.",
+    aboutVisualTitle:"The First Step to Become Part of PMR Wira.",
+    aboutVisualDesc:"The selection is a process to find members who are ready to learn, care, and contribute together.",
+    aboutText:"The PMR Wira selection is an initial step to build togetherness, care, and readiness to participate in PMR activities at school.",
+    quote:"“Whatever the result... you're doing great, keep growing.”",
+    ctaTitle:"Ready to see your result?",ctaDesc:"Enter your full name and class as registered.",ctaButton:"Check Selection Result →",
+    footer:"Selection result announcement portal · Made with spirit for PMR Wira.",
+    backHome:"← Back to Home",formTitle:"PMR WIRA Selection Result",
+    formMotivation:"Whatever the result... you're doing great, keep growing.",
+    nameLabel:"Full Name",classLabel:"Class",namePlaceholder:"Full Name",
+    classPlaceholder:"Example: XI TJKT 2",formNote:"Remember to pray and stay confident!",
+    checkButton:"View Selection Result",tagline:"PMR Spirit yeah!",
+    countTitle:"Your result is being prepared",
+    countMini:"Stay calm, your result will appear shortly...",
+    invalid:"Please enter your name and class first."
+  }
+};
+
+let language = "id";
+
+function changeLanguage(lang){
+  language = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.dataset.i18n;
+    if(translations[lang][key] !== undefined) el.innerHTML = translations[lang][key];
+  });
+  document.querySelectorAll("[data-placeholder]").forEach(el=>{
+    const key = el.dataset.placeholder;
+    if(translations[lang][key] !== undefined) el.placeholder = translations[lang][key];
+  });
+}
+
+function showView(id){
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  window.scrollTo({top:0,behavior:"instant"});
+}
+
+function lihatHasil(){
+  const nama = document.getElementById("inputNama").value.trim();
+  const kelas = document.getElementById("inputKelas").value.trim();
+  const errorBox = document.getElementById("errorBox");
+
+  if(!nama || !kelas){
+    errorBox.textContent = translations[language].invalid;
+    errorBox.classList.add("show");
+    return;
+  }
+  errorBox.classList.remove("show");
+
+  const key = `${nama}|${kelas}`;
+  currentResult = {nama, kelas, hasil:dataPeserta[key]};
+
+  showView("countdownView");
+
+  let count = 3;
+  const box = document.getElementById("countdownBox");
+  box.textContent = count;
+
+  const interval = setInterval(()=>{
+    count--;
+    if(count > 0){
+      box.textContent = count;
+      box.style.animation="none";
+      void box.offsetWidth;
+      box.style.animation="pop .8s ease";
+    }else{
+      clearInterval(interval);
+      renderResult();
+      showView("resultView");
+    }
+  },1000);
+}
+
+function renderResult(){
+  const {nama,kelas,hasil} = currentResult;
+  const page = document.getElementById("resultPage");
+  const lolos = hasil === "Lolos";
+  const found = hasil === "Lolos" || hasil === "Tidak Lolos";
+  const id = language === "id";
+
+  if(!found){
+    page.innerHTML = `
+      <div class="result-container">
+        <div class="result-top">
+          <div class="result-kicker">PMR WIRA · SMK NEGERI 1 SUKOHARJO</div>
+          <h2>${id ? "Data peserta belum ditemukan" : "Participant data not found"}</h2>
+          <p>${id ? "PENGUMUMAN SELEKSI ANGGOTA BARU" : "NEW MEMBER SELECTION ANNOUNCEMENT"}</p>
+        </div>
+        <div class="not-found">
+          <div class="nf-icon">🔎</div>
+          <h3>${id ? "DATA PESERTA TIDAK DITEMUKAN" : "PARTICIPANT DATA NOT FOUND"}</h3>
+          <p>${id ? "Periksa kembali penulisan nama dan kelas. Nama dan kelas harus sesuai dengan data pendaftaran." : "Please check the spelling of your name and class. Name and class must match the registration data."}</p>
+          <button class="btn again" onclick="showView('formView')">${id ? "Coba Lagi" : "Try Again"}</button>
+        </div>
+      </div>`;
+    return;
+  }
+
+  page.innerHTML = `
+    <div class="result-container">
+      <div class="result-top">
+        <div class="result-kicker">PMR WIRA · SMK NEGERI 1 SUKOHARJO</div>
+        <h2>${lolos ? (id ? "Selamat atas perjuanganmu!" : "Congratulations on your journey!") : (id ? "Terima kasih sudah berjuang." : "Thank you for your effort.")}</h2>
+        <p>${id ? "HASIL SELEKSI ANGGOTA BARU" : "NEW MEMBER SELECTION RESULT"}</p>
+      </div>
+
+      <div class="status-card ${lolos ? "status-pass" : "status-fail"}">
+        <div class="status-header">
+          <small>${id ? "HASIL SELEKSI" : "SELECTION RESULT"}</small>
+          ${lolos
+            ? (id ? "SELAMAT! ANDA DINYATAKAN LOLOS SELEKSI PMR WIRA SMK NEGERI 1 SUKOHARJO" : "CONGRATULATIONS! YOU HAVE PASSED THE PMR WIRA SMK NEGERI 1 SUKOHARJO SELECTION")
+            : (id ? "MOHON MAAF, ANDA DINYATAKAN TIDAK LOLOS SELEKSI PMR WIRA SMK NEGERI 1 SUKOHARJO" : "SORRY, YOU HAVE NOT PASSED THE PMR WIRA SMK NEGERI 1 SUKOHARJO SELECTION")}
+        </div>
+
+        <div class="identity">
+          <div class="identity-item">
+            <span class="label">${id ? "Nama Peserta" : "Participant Name"}</span>
+            <span class="value">${escapeHTML(nama)}</span>
+          </div>
+          <div class="identity-item">
+            <span class="label">${id ? "Kelas" : "Class"}</span>
+            <span class="value">${escapeHTML(kelas)}</span>
+          </div>
+          <div class="identity-item">
+            <span class="label">${id ? "Unit / Instansi" : "Institution"}</span>
+            <span class="value">SMK Negeri 1 Sukoharjo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>${id ? "Informasi Tambahan" : "Additional Information"}</h4>
+        <p class="note-text">
+          ${lolos
+            ? (id ? "Selamat bergabung bersama keluarga besar PMR WIRA ⛑️💉. Kami tunggu partisipasi aktifmu di pertemuan dan kegiatan selanjutnya yaa!" : "Welcome to the PMR WIRA family ⛑️💉. We look forward to your active participation in upcoming meetings and activities!")
+            : (id ? "Tidak apa-apaa jika belum berhasil sekarang. Proud of you jangan berkecil hati. Teruslah melangkah dengan semangat yang sama yaa 🫂🤍" : "It is okay if you did not succeed this time. We are proud of your effort. Keep moving forward with the same spirit 🫂🤍.")}
+        </p>
+
+        <div class="result-quote ${lolos ? "quote-pass" : "quote-fail"}">
+           ${lolos
+            ? (id ? "“You’re meant to be heree! ✨”" : "“You’re meant to be here! ✨”")
+            : (id ? "“We’re proudd of your effort 🫂🩵”" : "“We’re proud of your effort 🫂🩵”")}
+        </div>
+
+        <div class="actions">
+          ${lolos ? `<button class="btn wa" id="waButton">${id ? "Informasi / Gabung Grup WA" : "Information / Join WA Group"}</button>` : ""}
+          <button class="btn again" onclick="showView('formView')">${id ? "Coba Lagi" : "Try Again"}</button>
+        </div>
+      </div>
+    </div>`;
+
+  const wa = document.getElementById("waButton");
+  if(wa) wa.addEventListener("click",gabungWA);
+}
+
+function gabungWA(){
+  const linkGrup = "https://chat.whatsapp.com/";
+  if(linkGrup === "https://chat.whatsapp.com/"){
+    alert(language === "id" ? "Link grup WhatsApp belum ditambahkan." : "The WhatsApp group link has not been added yet.");
+    return;
+  }
+  window.open(linkGrup,"_blank");
+}
+
+function escapeHTML(text){
+  const div=document.createElement("div");
+  div.textContent=text;
+  return div.innerHTML;
+}
+
+document.getElementById("inputNama").addEventListener("keydown",e=>{
+  if(e.key==="Enter") document.getElementById("inputKelas").focus();
+});
+document.getElementById("inputKelas").addEventListener("keydown",e=>{
+  if(e.key==="Enter") lihatHasil();
+});
+
+changeLanguage("id");
+</script>
+</body>
+</html>
